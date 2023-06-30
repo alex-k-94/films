@@ -23,4 +23,14 @@ for (let i =0; i < 2; i++) {
     }
 }
 
+if (personalMovieDB.count < 10) {
+    console.log("You watched too small amount of films");
+} else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+    console.log("You are average watcher")
+} else if (personalMovieDB.count >= 30) {
+    console.log("You are a kinoman");
+} else {
+    console.log("Error")
+}
+
 console.log(personalMovieDB);
