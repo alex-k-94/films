@@ -20,14 +20,6 @@ let personalMovieDB = {
     privat: false
 };
 
-function showMyDB () {
-    if (personalMovieDB.privat == false) {
-        console.log(personalMovieDB);
-    }
-}
-
-showMyDB();
-
 function rememberMyFilms() {
     for (let i =0; i < 2; i++) {
         const a = prompt('One of the latest watched movies?', ''),
@@ -58,3 +50,20 @@ function detectPersonalLevel() {
 }
 
 detectPersonalLevel();
+
+function writeYourGenres() {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`What is your favourite genre by the number ${i}`);
+        personalMovieDB.genres[i -1] = genre;
+    }
+}
+
+writeYourGenres();
+
+function showMyDB () {
+    if (personalMovieDB.privat == false) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB();
