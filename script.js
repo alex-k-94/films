@@ -20,6 +20,14 @@ let personalMovieDB = {
     privat: false
 };
 
+function showMyDB () {
+    if (personalMovieDB.privat == false) {
+        console.log(personalMovieDB);
+    }
+}
+
+showMyDB();
+
 function rememberMyFilms() {
     for (let i =0; i < 2; i++) {
         const a = prompt('One of the latest watched movies?', ''),
@@ -50,5 +58,3 @@ function detectPersonalLevel() {
 }
 
 detectPersonalLevel();
-
-console.log(personalMovieDB);
